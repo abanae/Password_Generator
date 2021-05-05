@@ -83,3 +83,27 @@ function upperCase(){
     }
     return upperConfirm;
 }
+
+//   //Numbers Function
+
+function numbers(){
+  numberConfirm = prompt(`Would this include numbers? \n(Yes or No)`);
+    if (numberConfirm === null || numberConfirm === ""){
+      alert(`Please answer Yes or No`);
+      numbers();
+
+    }else if (numberConfirm === "yes"){
+      numberConfirm = true;
+      return numberConfirm;
+
+    }else if (numberConfirm === "no"){
+      numberConfirm = false;
+      return numberConfirm;
+    
+    }else {
+      alert(`Please answer Yes or No`);
+      numbers();
+    }
+    return numberConfirm;
+}
+
