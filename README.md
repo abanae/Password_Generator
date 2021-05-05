@@ -1,4 +1,10 @@
 # 03 JavaScript: Password Generator
 
-## Work in progress
+## DESCRIPTION:
+
+
+## SCREENSHOT:
+
+
+### LINK TODEPLOYED URL :
 
