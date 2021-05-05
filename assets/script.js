@@ -37,3 +37,49 @@ function passwordSize(){
     }
     return usersLength;
 }
+
+// Letter case (/lower)
+
+function lowerCase(){
+  lowerConfirm = prompt(`Would this include lowercase letters? \n(Yes or No)`);
+    if (lowerConfirm === null || lowerConfirm === ""){
+      alert(`Please answer Yes or No`);
+      lowrCase();
+
+    }else if (lowerConfirm === "yes"){
+      lowerConfirm = true;
+      return lowerConfirm;
+
+    }else if (lowerConfirm === "no"){
+      lowerConfirm = false;
+      return lowerConfirm;
+    
+    }else {
+      alert(`Please answer Yes or No`);
+      lowerCase();
+    }
+    return lowerConfirm;
+}
+
+// Letter case (/upper)
+
+function upperCase(){
+  upperConfirm = prompt(`Would this include uppercase letters? \n(Yes or No)`);
+    if (upperConfirm === null || upperConfirm === ""){
+      alert(`Please answer Yes or No`);
+      upperCase();
+
+    }else if (upperConfirm === "yes"){
+      upperConfirm = true;
+      return upperConfirm;
+
+    }else if (upperConfirm === "no"){
+      upperConfirm = false;
+      return upperConfirm;
+    
+    }else {
+      alert(`Please answer Yes or No`);
+      upperCase();
+    }
+    return upperConfirm;
+}
