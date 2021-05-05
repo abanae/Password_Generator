@@ -130,4 +130,46 @@ function numbers(){
       return synbolComfirm;
   }
 
-  
+ //    Password Generator Function
+
+ function passwordGen(){
+  passwordSize();
+  console.log(usersLength);
+  lowerCase();
+  console.log(lowerConfirm);
+  upperCase();
+  console.log(upperConfirm);
+  numbers();
+  console.log(numberConfirm);
+  specialChar();
+  console.log(symbolConfirm);
+  totalChar();
+  console.log(totalChar);
+}
+
+var characters = function () {
+  var totalChar = "";
+    if (lowerConfirm ==="yes") { 
+   totalChar = characters.concat(lower);
+   }hi 
+    if (upperConfirm === "yes") {
+   totalChar = totalChar.concat(upper);
+   }
+   if (numberConfirm === "yes") {
+   totalChar = totalChar.concat(number);
+   }
+   if (symbolConfirm === "yes") {
+   totalChar = totalChar.concat(symbol);
+  }
+  return totalChar;
+}
+
+// function passwordGen () {
+//   var another = ""; 
+//   for (var i = 0; i< usersLength; i++){
+//   var nextRow =totalChar.charAt(Math.floor(Math.random));
+//    another = another.concat(nextRow);
+//   }
+//   return another;
+//   }
+
