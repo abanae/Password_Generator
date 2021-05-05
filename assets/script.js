@@ -140,8 +140,27 @@ function upperCase(){
     console.log(numberConfirm);
     specialChar();
     console.log(symbolConfirm);
+    totalChar();
+    console.log(totalChar);
   }
   
+  var characters = function () {
+    var totalChar = "";
+      if (lowerConfirm ==="yes") { 
+     totalChar = characters.concat(lower);
+     }
+      if (upperConfirm === "yes") {
+     totalChar = totalChar.concat(upper);
+     }
+     if (numberConfirm === "yes") {
+     totalChar = totalChar.concat(number);
+     }
+     if (symbolConfirm === "yes") {
+     totalChar = totalChar.concat(symbol);
+    }
+    return totalChar;
+  }
+
   function passwordGen () {
     var another = ""; 
     for (var i = 0; i< usersLength; i++){
@@ -150,6 +169,7 @@ function upperCase(){
     }
     return another;
     }
+ 
 
 //   // Input Generated
   function inputPassword() {
@@ -158,29 +178,9 @@ function upperCase(){
     passwordResult.value = result;
   }
 
-var characters = function () {
- var totalChar = "";
-   if (lowerConfirm ==="yes") { 
-  totalChar = characters.concat(lower);
-  }
-   if (upperConfirm === "yes") {
-  totalChar = totalChar.concat(upper);
-  }
-  if (numberConfirm === "yes") {
-  totalChar = totalChar.concat(number);
-  }
-  if (symbolConfirm === "yes") {
-  totalChar = totalChar.concat(symbol);
-}
-return totalChar;
-}
-
-
-
+// Reset Function
   function reset(){
     document.getElementById(`password`).value = `Your Secure Password`;
   }
-
-  
 
 $button.addEventListener(`click`, inputPassword);
