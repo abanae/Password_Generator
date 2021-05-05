@@ -40,7 +40,7 @@ function passwordSize(){
       return usersLength;
   }
 
-  // Lower Function
+  // Letter case (upper/lower)
 
   function lowerCase(){
     lowerConfirm = prompt(`Would this include lowercase letters? \n(Yes or No)`);
@@ -63,7 +63,7 @@ function passwordSize(){
       return lowerConfirm;
   }
 
-//Uppercase Function
+
 
 function upperCase(){
     upperConfirm = prompt(`Would this include uppercase letters? \n(Yes or No)`);
@@ -110,6 +110,7 @@ function upperCase(){
   }
   
 //   //Symbols Function
+
   function specialChar(){
     synbolComfirm = prompt(`Would this include special characters? \n(Yes or No)`);
       if (synbolComfirm === null || synbolComfirm === ""){
