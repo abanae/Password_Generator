@@ -9,7 +9,7 @@ const $button = document.querySelector(`#generate`);
 var lower = `abcdefghijklmnopqrstuvwxyz`;
 var upper = `ABCDEFGHIJKLMNOPQRSTUVWXYZ`;
 var number = `0123456789`;
-var symbol = `~!@#$%^&*()_+-={}[]/?<>.,|;:'"`
+var symbol = `~!@#$%&*_{}[]/?<>.`
 var usersLength;
 var lowerConfirm;
 var upperConfirm;
@@ -110,24 +110,24 @@ function numbers(){
 // /   //Symbols Function
 
   function specialChar(){
-    synbolComfirm = prompt(`Would this include special characters? \n(Yes or No)`);
-      if (synbolComfirm === null || synbolComfirm === ""){
+    symbolConfirm = prompt(`Would this include special characters? \n(Yes or No)`);
+      if (symbolConfirm === null || symbolConfirm === ""){
         alert(`Please answer Yes or No`);
         specialChar();
   
-      }else if (synbolComfirm === "yes"){
-        synbolComfirm = true;
-        return synbolComfirm;
+      }else if (symbolConfirm === "yes"){
+        symbolConfirm = true;
+        return symbolConfirm;
   
-      }else if (synbolComfirm === "no"){
-        synbolComfirm = false;
-        return synbolComfirm;
+      }else if (symbolConfirm === "no"){
+        symbolConfirm = false;
+        return symbolConfirm;
       
       }else {
         alert(`Please answer Yes or No`);
         specialChar();
       }
-      return synbolComfirm;
+      return symbolConfirm;
   }
 
  //    Password Generator Function
@@ -143,35 +143,38 @@ function numbers(){
   console.log(numberConfirm);
   specialChar();
   console.log(symbolConfirm);
-  totalChar();
+  characters();
   console.log(totalChar);
+var result = passwordRandomizer ();
+return result;
+
 }
 
 var characters = function () {
-  var totalChar = "";
-    if (lowerConfirm ==="yes") { 
-   totalChar = characters.concat(lower);
-   }hi 
-    if (upperConfirm === "yes") {
+  totalChar = "";
+    if (lowerConfirm ===true) { 
+   totalChar = totalChar.concat(lower);
+   } 
+    if (upperConfirm === true) {
    totalChar = totalChar.concat(upper);
    }
-   if (numberConfirm === "yes") {
+   if (numberConfirm === true) {
    totalChar = totalChar.concat(number);
    }
-   if (symbolConfirm === "yes") {
+   if (symbolConfirm === true) {
    totalChar = totalChar.concat(symbol);
   }
-  return totalChar;
+  
 }
 
-// function passwordGen () {
-//   var another = ""; 
-//   for (var i = 0; i< usersLength; i++){
-//   var nextRow =totalChar.charAt(Math.floor(Math.random));
-//    another = another.concat(nextRow);
-//   }
-//   return another;
-//   }
+function passwordRandomizer () {
+  var another = ""; 
+  for (var i = 0; i< usersLength; i++){
+  var nextRow = Math.floor(Math.random() * totalChar.length); 
+   another = another.concat(totalChar[nextRow]);
+  }
+  return another;
+  }
 
 //   // Password Results
 function inputPassword() {
