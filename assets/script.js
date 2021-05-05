@@ -1,9 +1,6 @@
 
 const $button = document.querySelector(`#generate`);
 
-// $button.addEventListener(`click`, () => {
-// alert(`Welcome to the Password Generator!`);
-// });
 
 // Assigned Variables
 var lower = `abcdefghijklmnopqrstuvwxyz`;
@@ -21,6 +18,7 @@ var totalChar;
 // Lenght of Password
 
 function passwordSize(){
+  alert(`Welcome to the Password Generator!`);
   usersLength = prompt(`Choose a length of at least 8 characters and no more than 128 characters`);
 
     if (usersLength<8){
