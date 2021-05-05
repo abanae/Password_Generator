@@ -1,5 +1,5 @@
 
-// const $button = document.querySelector(`#generate`);
+const $button = document.querySelector(`#generate`);
 
 // $button.addEventListener(`click`, () => {
 // alert(`Welcome to the Password Generator!`);
@@ -7,7 +7,6 @@
 
 // Assigned Variables
 
-var button = document.querySelector(`#generate`);
 var lower = `abcdefghijklmnopqrstuvwxyz`;
 var upper = `ABCDEFGHIJKLMNOPQRSTUVWXYZ`;
 var number = `0123456789`;
@@ -41,23 +40,21 @@ function passwordSize(){
 
   function lowerCase(){
     lowerConfirm = prompt(`Would this include lowercase letters? \n(Yes or No)`);
-    //   lowerConfirm = lowerConfirm.toLowerCase();
-  
       if (lowerConfirm === null || lowerConfirm === ""){
         alert(`Please answer Yes or No`);
-        upperCase();
+        lowrCase();
 
       }else if (lowerConfirm === "yes"){
-        upperConfirm = true;
+        lowerConfirm = true;
         return lowerConfirm;
   
       }else if (lowerConfirm === "no"){
-        upperConfirm = false;
+        lowerConfirm = false;
         return lowerConfirm;
       
       }else {
         alert(`Please answer Yes or No`);
-        upperCase();
+        lowerCase();
       }
       return lowerConfirm;
   }
@@ -66,8 +63,6 @@ function passwordSize(){
 
 function upperCase(){
     upperConfirm = prompt(`Would this include uppercase letters? \n(Yes or No)`);
-    //   upperConfirm = upperConfirm.toLowerCase();
-  
       if (upperConfirm === null || upperConfirm === ""){
         alert(`Please answer Yes or No`);
         upperCase();
@@ -91,8 +86,6 @@ function upperCase(){
 
   function numbers(){
     numberConfirm = prompt(`Would this include numbers? \n(Yes or No)`);
-    //   numberConfirm = numberConfirm.toLowerCase();
-  
       if (numberConfirm === null || numberConfirm === ""){
         alert(`Please answer Yes or No`);
         numbers();
@@ -115,8 +108,6 @@ function upperCase(){
 //   //Symbols Function
   function specialChar(){
     synbolComfirm = prompt(`Would this include special characters? \n(Yes or No)`);
-    //   synbolComfirm = synbolComfirm.toLowerCase();
-  
       if (synbolComfirm === null || synbolComfirm === ""){
         alert(`Please answer Yes or No`);
         specialChar();
@@ -149,55 +140,53 @@ function upperCase(){
     console.log(numberConfirm);
     specialChar();
     console.log(symbolConfirm);
-  
-// //   var characters = lower;
-  var password = "";
-  if (lowerConfirm && upperConfirm && numberConfirm && symbolConfirm){
-    lower + upper + number + symbol;
-
-  }else if (upperConfirm && numberConfirm && symbolConfirm){
-    upper + number + symbol;
-  
-  }else if (upperConfirm && numberConfirm){
-    upper + number;
-  
-  }else if (numberConfirm && symbolConfirm){
-    number + symbol;
-  
-  }else if (upperConfirm && symbolConfirm){
-    upper + symbol;
-  
-  }else if (upperConfirm){
-    lower + upper;
-  
-  }else if(numberConfirm){
-    lower + number;
-  
-  }else if (symbolConfirm){
-    lower + symbol;
-  
   }
   
-    for(var i = 0; i < usersLength; i++){
-      password.charAt(Math.floor(Math.random() * lowerCase.length));
+  function passwordGen () {
+    var another = ""; 
+    for (var i = 0; i< usersLength; i++){
+    var nextRow =totalChar.charAt(Math.floor(Math.random));
+     another = another.concat(nextRow);
     }
-    return password;
-  }
-  
+    return another;
+    }
+
 //   // Input Generated
   function inputPassword() {
-    var result = "";
-    result = passwordGen();
+   var  result = passwordGen();
     var passwordResult = document.querySelector(`#password`);
     passwordResult.value = result;
   }
-  
+
+var characters = function () {
+ var totalChar = "";
+   if (lowerConfirm ==="yes") { 
+  totalChar = characters.concat(lower);
+  }
+   if (upperConfirm === "yes") {
+  totalChar = totalChar.concat(upper);
+  }
+  if (numberConfirm === "yes") {
+  totalChar = totalChar.concat(number);
+  }
+  if (symbolConfirm === "yes") {
+  totalChar = totalChar.concat(symbol);
+}
+return totalChar;
+}
+
+
+
   function reset(){
     document.getElementById(`password`).value = `Your Secure Password`;
   }
+
   
 
-button.addEventListener(`click`, inputPassword);
+$button.addEventListener(`click`, inputPassword);
+
+
+
 
 
 
