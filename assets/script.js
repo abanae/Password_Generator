@@ -180,3 +180,9 @@ function inputPassword() {
    passwordResult.value = result;
  }
 
+// Reset Function
+function reset(){
+  document.getElementById(`password`).value = `Your Secure Password`;
+}
+
+$button.addEventListener(`click`, inputPassword);
