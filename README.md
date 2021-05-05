@@ -1,6 +1,6 @@
 # 03 JavaScript: Password Generator
 
-## DESCRIPTION:
+## DESCRIPTION 📖:
 
 
 ## FINAL RESULTS:
