@@ -173,11 +173,10 @@ var characters = function () {
 //   return another;
 //   }
 
-//   // Input Generated
+//   // Password Results
 function inputPassword() {
   var  result = passwordGen();
    var passwordResult = document.querySelector(`#password`);
    passwordResult.value = result;
  }
 
- 
