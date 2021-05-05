@@ -16,9 +16,10 @@ var lowerConfirm;
 var upperConfirm;
 var numberConfirm;
 var symbolConfirm;
-
+var totalChar;
 
 // //User Choices
+
 // Lenght of Password
 
 function passwordSize(){
@@ -40,7 +41,7 @@ function passwordSize(){
   }
 
   // Lower Function
-  
+
   function lowerCase(){
     lowerConfirm = prompt(`Would this include lowercase letters? \n(Yes or No)`);
       if (lowerConfirm === null || lowerConfirm === ""){
