@@ -107,3 +107,27 @@ function numbers(){
     return numberConfirm;
 }
 
+// /   //Symbols Function
+
+  function specialChar(){
+    synbolComfirm = prompt(`Would this include special characters? \n(Yes or No)`);
+      if (synbolComfirm === null || synbolComfirm === ""){
+        alert(`Please answer Yes or No`);
+        specialChar();
+  
+      }else if (synbolComfirm === "yes"){
+        synbolComfirm = true;
+        return synbolComfirm;
+  
+      }else if (synbolComfirm === "no"){
+        synbolComfirm = false;
+        return synbolComfirm;
+      
+      }else {
+        alert(`Please answer Yes or No`);
+        specialChar();
+      }
+      return synbolComfirm;
+  }
+
+  
