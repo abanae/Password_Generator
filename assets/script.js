@@ -19,6 +19,7 @@ var symbolConfirm;
 
 
 // //User Choices
+// Lenght of Password
 
 function passwordSize(){
     usersLength = prompt(`Choose a length of at least 8 characters and no more than 128 characters`);
@@ -38,6 +39,8 @@ function passwordSize(){
       return usersLength;
   }
 
+  // Lower Function
+  
   function lowerCase(){
     lowerConfirm = prompt(`Would this include lowercase letters? \n(Yes or No)`);
       if (lowerConfirm === null || lowerConfirm === ""){
@@ -148,7 +151,7 @@ function upperCase(){
     var totalChar = "";
       if (lowerConfirm ==="yes") { 
      totalChar = characters.concat(lower);
-     }
+     }hi 
       if (upperConfirm === "yes") {
      totalChar = totalChar.concat(upper);
      }
@@ -161,14 +164,14 @@ function upperCase(){
     return totalChar;
   }
 
-  function passwordGen () {
-    var another = ""; 
-    for (var i = 0; i< usersLength; i++){
-    var nextRow =totalChar.charAt(Math.floor(Math.random));
-     another = another.concat(nextRow);
-    }
-    return another;
-    }
+  // function passwordGen () {
+  //   var another = ""; 
+  //   for (var i = 0; i< usersLength; i++){
+  //   var nextRow =totalChar.charAt(Math.floor(Math.random));
+  //    another = another.concat(nextRow);
+  //   }
+  //   return another;
+  //   }
  
 
 //   // Input Generated
