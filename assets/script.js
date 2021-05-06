@@ -1,4 +1,4 @@
-
+// Buttom to start
 const $button = document.querySelector(`#generate`);
 
 
