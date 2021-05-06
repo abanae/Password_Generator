@@ -1,7 +1,7 @@
 # 03 JavaScript: Password Generator
 
 ## DESCRIPTION 📖:
-This website generates a random password for users. It prompts a series of (yes & no) questions to determine the characters needed to generate.
+This website uses JavaScript to create a random password for users. It prompts a series of yes or no questions to determine length, letter case, numbers and special characters to generate a random password.
 
 
 ## FINAL RESULTS:
