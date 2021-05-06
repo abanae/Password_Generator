@@ -5,6 +5,7 @@ This website generates a random password for users. It prompts a series of (yes 
 
 
 ## FINAL RESULTS:
+![Video of Deployed URL](https://media.giphy.com/media/4vsUGoUHuJb3lsHImx/giphy.gif)
 
 
 ### LINK TO DEPLOYED URL :
